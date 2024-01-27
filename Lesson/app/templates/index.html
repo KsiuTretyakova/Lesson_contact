@@ -11,15 +11,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-<!--    <h1>Hello</h1>-->
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">New</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-
+    </nav>
+    <form>
+        <div class="row">
+          <div class="col">
+              <label for="NameInput" class="form-label">Name</label>
+              <input type="text" class="form-control" id = "NameInput" placeholder="Name" aria-label="Name">
+          </div>
+          <div class="col">
+              <label for="LastNameInput" class="form-label">LastName</label>
+              <input type="text" class="form-control" id = "LastNameInput" placeholder="Lastname" aria-label="Lastname">
+          </div>
+            <label for="PhoneNumberInput" class="form-label">Phone Number</label>
+          <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="PhoneNumberInput">+380</span>
+              <input type="text" class="form-control" placeholder="PhoneNumber" aria-label="PhoneNumber" aria-describedby="addon-wrapping">
+          </div>
+            <label for="PhotoInput" class="form-label">Photo</label>
+          <div class="input-group mb-3">
+              <input type="file" class="form-control" id="PhotoInput">
+              <label class="input-group-text" for="PhotoInput">Upload</label>
+          </div>
+    </form>
+    <div class="grid text-center">
+        <div class="g-col-6">
+            <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     </div>
+        <div class="g-col-6">.g-col-6</div>
+
+        <div class="g-col-6">.g-col-6</div>
+        <div class="g-col-6">.g-col-6</div>
+    </div>
+
 </body>
 </html>
