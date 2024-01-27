@@ -5,7 +5,7 @@
 
 
 ```mermaid
-classDiagram
+classDiagram    
     class Contact {
         id: integer
         name: varchar
@@ -13,4 +13,24 @@ classDiagram
         number: varchar
         photo: fileField
     }
+```
+
+```mermaid
+erDiagram
+%%    Menu }o --|| Contact : new
+    Menu {
+        New New_card
+        Find Number_or_name
+        Phone_book All_card
+    }
+    
+    Contact {
+        id integer
+        name varchar
+        second_name varchar
+        number varchar
+        photo fileField
+    }
+    
+    
 ```
