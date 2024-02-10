@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=20, verbose_name='name')),
                 ('last_name', models.CharField(max_length=20, verbose_name='last_name')),
                 ('number', models.CharField(max_length=15, verbose_name='number')),
+                ('photo', models.FileField(upload_to='images/img_contact/', null=True, blank=True, verbose_name='photo'))
             ],
         ),
     ]
