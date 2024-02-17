@@ -1,8 +1,8 @@
 {% extends 'main/layout.html' %}
 {% block body %}
-    <h1>
-        Hello, {{nameVariable}}
-    </h1>
+    {% for i in data %}
+        <img width="100" height="200" src = '{{i.photo}}' alt = 'photo'>
+    {% endfor %}
 {% endblock %}
 
 {% block title %}
