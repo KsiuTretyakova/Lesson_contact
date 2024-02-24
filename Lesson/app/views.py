@@ -10,3 +10,6 @@ def index(request):
         'main/index.html',
         {'data': contacts, 'title': 'Contacts list'}
     )
+
+def addContact():
+    pass
