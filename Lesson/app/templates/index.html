@@ -1,10 +1,23 @@
-{% extends 'layout.html' %}
-{% block body %}
-    {% for i in data %}
-        <img scr="{{ data.0.photo }}" alt="">
-    {% endfor %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+    {% block body %}
+        {% for i in data %}
+            <img width="200" height="200" scr="{{ i.photo }}" alt="">
+        {% endfor %}
+    {% endblock %}
 
-{% block title %}
-    Contacts
-{% endblock %}
+    {% block title %}
+        Contacts
+    {% endblock %}
+
+
+</body>
+</html>
+
