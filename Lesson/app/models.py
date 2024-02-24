@@ -7,3 +7,6 @@ class Contact(models.Model):
     number = models.CharField('number', max_length=15)
     photo = models.FileField('photo', upload_to='uploads/', null=True,
                              blank=True)
+
+def __str__(self):
+    return f'{self.name} {self.number}'
