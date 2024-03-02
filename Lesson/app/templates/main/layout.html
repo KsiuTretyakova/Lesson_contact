@@ -32,11 +32,12 @@
 
     {% block content %}
         <div class="form-cont">
-            <form id="myForm" method="post" action="">
-                <input type="text" width="100">
+            <form id="myForm" method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+              <!-- <input type="text" width="100"> -->
 
                 <label class="form-label">Name</label>
-                {{form.name}}
+                <span class="form">{{form.name}}</span>
 
                 <button type="submit">Submit</button>
             </form>
@@ -54,6 +55,7 @@
         </script>
 
     {% endblock %}
+    {{ error }}
 
 </body>
 </html>
