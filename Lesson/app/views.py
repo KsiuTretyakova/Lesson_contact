@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http import HttpResponse
+
+from .forms import ContactForm
 from .models import Contact
 
 
@@ -11,5 +14,14 @@ def index(request):
         {'data': contacts, 'title': 'Contacts list'}
     )
 
-def addContact():
-    pass
+def addContact(request):
+    error = ""
+    if request.method == "POST":
+        form = ContactForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(index)
+        else:
+            error = "ERROR"
+    form = ContactForm()
+    return (request, 'main/index.html', {'form':form, 'error':error})

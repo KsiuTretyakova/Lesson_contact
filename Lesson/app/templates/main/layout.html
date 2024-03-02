@@ -32,7 +32,8 @@
 
     {% block content %}
         <div class="form-cont">
-            <form id="myForm" method="post" action="">
+            <form id="myForm" method="post" action="", enctype="">
+                {% csrf_token %}
                 <input type="text" width="100">
 
                 <label class="form-label">Name</label>
