@@ -27,7 +27,6 @@
     </nav>
 
     {% block body  %}
-    {{form.name}}
     {% endblock %}
     {% block content %}
         <div class = "form-container">
@@ -37,6 +36,7 @@
                       <label for="NameInput" class="form-label">Name</label>
 
                       {% csrf_token %}
+                      {{form.name}}
                       <input type="text" class="form-control" id = "NameInput" placeholder="Name" aria-label="Name">
                   </div>
                   <div class="col">

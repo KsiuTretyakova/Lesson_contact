@@ -9,7 +9,7 @@ def index(request):
     return render(
         request,
         'main/index.html',
-        {'data': contacts, 'title': 'Contacts list'}
+        {'data': contacts, 'title': 'Contacts list', "form": ContacForm}
     )
 
 def addContact(request):
