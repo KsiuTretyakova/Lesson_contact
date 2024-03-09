@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% extends 'layout.html' %}
-    {% block body %}
-        {% for i in data %}
-            <img width="200" height="200" scr="{{ i.photo }}" alt="">
-        {% endfor %}
-    {% endblock %}
+{% extends 'layout.html' %}
+{% block body %}
+    {% for i in data %}
+        <p>
+            {{i.name}}
+            {{i.last_name}}
+            {{i.number}}
+            <img width="200" height="200" scr="{{ i.photo }}" alt="photo">
+        </p>
+        <a href="tel:{{ i.number }}" class="btn">Зателефонувати</a>
+{% endfor %}
+{% endblock %}
 
-    {% block title %}
-        Contacts
-    {% endblock %}
+{% block title %}
+    Contacts
+{% endblock %}
 
-
-</body>
-</html>
 

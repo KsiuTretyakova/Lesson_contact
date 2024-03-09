@@ -20,4 +20,4 @@ def addContact(request):
         else:
             error = "ERROR"
     form = ContactForm()
-    return render(request, 'index,html', {form })
+    return render(request, 'index,html', {'form':form, 'error':error})
