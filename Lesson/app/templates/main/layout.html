@@ -33,25 +33,24 @@
             <form id = "myForm" method = "post" action="" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col">
-                      <label for="NameInput" class="form-label">Name</label>
+                      <label class="form-label">Name</label>
 
                       {% csrf_token %}
-                      {{form.name}}
-                      <input type="text" class="form-control" id = "NameInput" placeholder="Name" aria-label="Name">
+                      <span>{{form.name}}</span>
                   </div>
                   <div class="col">
-                      <label for="LastNameInput" class="form-label">LastName</label>
-                      <input type="text" class="form-control" id = "LastNameInput" placeholder="Lastname" aria-label="Lastname">
+                      <label class="form-label">LastName</label>
+                      <span>{{form.surname}}</span>
                   </div>
                     <label for="PhoneNumberInput" class="form-label">Phone Number</label>
                   <div class="input-group flex-nowrap">
                       <span class="input-group-text" id="PhoneNumberInput">+380</span>
-                      <input type="text" class="form-control" placeholder="PhoneNumber" aria-label="PhoneNumber" aria-describedby="addon-wrapping">
+                      <span>{{form.phone_number}}</span>
                   </div>
-                    <label for="PhotoInput" class="form-label">Photo</label>
+                    <label class="form-label">Photo</label>
                   <div class="input-group mb-3">
-                      <input type="file" class="form-control" id="PhotoInput">
-                      <label class="input-group-text" for="PhotoInput">Upload</label>
+                      <span>{{form.photo}}</span>
+                      <label class="input-group-text">Upload</label>
                   </div>
             </form>
         </div>
