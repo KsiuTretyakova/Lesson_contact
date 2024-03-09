@@ -1,25 +1,75 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Document</title>-->
-
-<!--</head>-->
-<!--<body>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
 
+
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6xl6jYD5NH1L8ABqxCZQCkBHiIm/oY95Dm+ah4u/6H6i/k+pG69R6fh" crossorigin="anonymous"></script>
+</head>
 
 {% extends 'layout.html' %}
 
 {% block body %}
 
 {% for i in data %}
-    <div>{{i.name}} {{i.last_name}}</div>
-    <p>{{ i.number }}</p>
-    <img src="{{ i.photo }}">
-{% endfor %}
+<!--    <p>-->
+<!--    <div>{{i.name}} {{i.last_name}}</div>-->
+<!--    <p>{{ i.number }}</p>-->
+<!--    <img src="{{ i.photo }}">-->
 
+<!--<div class="grid text-center">-->
+<!--  <div class="g-col-6"><img src="{{ i.photo }}"></div>-->
+<!--  <div class="g-col-6">{{ i.number }}</div>-->
+<!--  <div class="g-col-6">{{i.name}} {{i.last_name}}</div>-->
+
+
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--</div>-->
+{% endfor %}
+<div class="grid text-center" style="display: grid">
+  <div class="g-col-6" style="width=100px;">.g-col-6</div>
+  <div class="g-col-6" style="width=100px;">.g-col-6</div>
+
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+</div>
+<!--<div>-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--</div>-->
+<!--<div >-->
+<!--  <div class="g-col-3 g-start-2">.g-col-3 .g-start-2</div>-->
+<!--  <div class="g-col-4 g-start-6">.g-col-4 .g-start-6</div>-->
+<!--</div>-->
+<!--<div class="grid text-center" style="&#45;&#45;bs-rows: 3; &#45;&#45;bs-columns: 3;">-->
+<!--  <div>Auto-column</div>-->
+<!--  <div class="g-start-2" style="grid-row: 2">Auto-column</div>-->
+<!--  <div class="g-start-3" style="grid-row: 3">Auto-column</div>-->
+<!--</div>-->
+<!--<div class="grid text-center" style="&#45;&#45;bs-gap: .25rem 1rem;">-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--  <div class="g-col-6">.g-col-6</div>-->
+<!--</div>-->
+
+<!--<div> style="&#45;&#45;bs-columns: 18; &#45;&#45;bs-gap: .5rem;">-->
+<!--  <div style="grid-column: span 14;">14 columns</div>-->
+<!--  <div class="g-col-4">.g-col-4</div>-->
+<!--</div>-->
 {% endblock %}
 {% block titel %}
 Contacts
@@ -31,5 +81,5 @@ Contacts
 
 <!--</script>-->
 
-<!--</body>-->
-<!--</html>-->
+</body>
+</html>
