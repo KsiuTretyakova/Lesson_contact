@@ -1,9 +1,17 @@
 {% extends 'main/layout.html' %}
 {% block body %}
-    {% for i in data %}
-    <p>1</p>
-<!--        <img width='200' height='200' src="{{ i.photo }}" alt="">-->
-    {% endfor %}
+
+        <div class="card" style="width: 18rem;">
+
+
+            <img class="card-img-top" width='100' height='200' src="{{ i.photo }}" alt="">
+             <div class="card-body">
+                <h5 classs="card-title">{{ data.name }} {{ data.surname }}</h5>
+                 <p class="card-text">{{ data.phone_number }}</p>
+                 <a href="tel:{{ i_phone_number }}" class="btn">позвонить</a>
+         </div>
+        </div>
+
 {% endblock %}
 
 {% block title %}
