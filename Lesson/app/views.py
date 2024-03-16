@@ -23,3 +23,9 @@ def addContact(request):
         form = ContactForm()
         return (request, "main/index.html",
                 {'form': form, 'error': error})
+
+
+def delete(request, id, name):
+    delete = Contact.objects.get(id=id)
+    delete.delete()
+    return redirect(index)

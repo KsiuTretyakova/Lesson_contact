@@ -21,9 +21,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-urlpatterns =[path('', views.index),path('admin/', admin.site.urls)
+urlpatterns =[
+        path('', views.index, name="home"),
+        path('admin/', admin.site.urls),
+        path("addContacts", views.addContact),
+        # path('<int:id> <str:name>', views.delete)
+        path('<int:id> <str:name>', views.delete)
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+             ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
