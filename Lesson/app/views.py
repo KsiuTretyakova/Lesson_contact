@@ -20,4 +20,9 @@ def addContact(request):
         else:
             error = "ERROR"
     form = ContactForm()
-    return render(request, 'index,html', {'form':form, 'error':error})
+    return render(request, 'index.html', {'form':form, 'error':error})
+
+def delete(request, id, name):
+    delete = Contact.objects.get(id=id)
+    delete.delete()
+    return redirect(index)
