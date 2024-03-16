@@ -2,7 +2,38 @@
 
 {% block body %}
     {% for i in data %}
-        <img width="100" height="200" src = '{{i.photo}}' alt = 'photo'>
+        <form id="editForm" method="post" action="editContact">
+            {% csrf_token %}
+            <input type = "hidden" name = "phone_number" value = "{{i.phone_number}}" />
+            <input name = "new_name" value = "{{i.name}}" />
+            <input name = "new_surname" value = "{{i.surname}}" />
+            <input name = "new_phone_number" value = "{{i.phone_number}}" />
+            <input name = "new_photo" value = "{{i.photo}}" />
+            <button type="submit">Зберегти</button>
+        </form>
+        <div id="contact">
+            {{i.name}}
+            {{i.surname}}
+            {{i.phone_number}}
+            <img width="100" height="200" src = '{{i.photo}}' alt = 'photo'>
+            <a href="tel={{ i.phone_number }}" class="btn">Зателефонувати</a>
+            <form id="delForm" method="post" action="deleteContact">
+                {% csrf_token %}
+                <input type="hidden" name = "phone_number" value = "{{i.phone_number}}" />
+                <button type="submit">Видалити</button>
+            </form>
+            <a id="edit">Редагувати</a>
+        </div>
+        <script>
+          $(document).ready(function() {
+            $('#editForm').toggle();
+            $('#editContact').click(function() {
+              $('#editForm').toggle();
+              $('#contact').toggle();
+            });
+          });
+        </script>
+
     {% endfor %}
 {% endblock %}
 
