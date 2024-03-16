@@ -22,5 +22,12 @@ def addContact(request):
         else:
             error = "ERROR"
     form = ContacForm()
+
     return(request, 'main/index.html',
            {'form': form, 'error': error})
+
+def delete(request, id):
+    delete = Contact.objects.get(id = id)
+    delete.delete()
+    return redirect(index)
+
